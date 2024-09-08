@@ -1,0 +1,23 @@
+{
+  "id": "1111-111-111",
+  "name": "name",
+  "email": "email@gmail.com",
+  "workouts": [
+    {
+      "date": "25-04-2024",
+      "name": "workout1",
+      "exercises": [
+        {
+          "name": "Bench Press",
+          "sets": [
+            {
+              "reps": 4,
+              "weight": 10,
+              "rpe": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
