@@ -1,25 +1,15 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
-import { montserrat } from './ui/fonts'
+import { onest } from './ui/fonts'
 import './ui/globals.css'
-
-const geistSans = localFont({
-  src: './ui/fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900'
-})
-const geistMono = localFont({
-  src: './ui/fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900'
-})
+import Header from './ui/global/header'
+import Footer from './ui/global/footer'
 
 export const metadata: Metadata = {
   title: 'eGym App - Fitness tracking application',
   description:
     'eGym is a comprehensive fitness tracking application designed to optimize your workout routine. With seamless integration of machine learning, it provides personalized exercise guidance, real-time pose tracking, and progress monitoring. Perfect for fitness enthusiasts looking to elevate their training experience.',
   icons: {
-    icon: '/favicon.webp'
+    icon: '/logo.webp'
   }
 }
 
@@ -30,11 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased`}
-      >
-        <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#0e0e11_50%,#c08e3a_120%)]"></div>
+      <body className={`${onest.className} antialiased`}>
+        <div className="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(192,142,58,0.4),rgba(255,255,255,0))]">
+          <div id="coupon-birds-embed-div"></div>
+        </div>
+        <Header></Header>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   )
