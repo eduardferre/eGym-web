@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -7,39 +9,39 @@ export default function Footer() {
         {' '}
         <span className="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90">
           © {currentYear}{' '}
-          <a
+          <Link
             href="https://eduardferre.dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline text-zinc-800/90 dark:text-zinc-200/90"
           >
             eduardferre
-          </a>{' '}
+          </Link>{' '}
         </span>{' '}
-        <a
+        <Link
           className="text-sm text-center italic text-zinc-800/90 dark:text-white/90 hover:underline"
           href="https://github.com/midudev/porfolio.dev/tree/main"
           target="_blank"
           rel="noopener noreferrer"
         >
           Inspired in midudev portfolio
-        </a>{' '}
+        </Link>{' '}
         <ul className="flex flex-wrap items-center text-sm font-medium text-zinc-800/90 dark:text-white/90 sm:mt-0">
           {' '}
           <li>
             {' '}
-            <a href="/#about-me" className="hover:underline me-4 md:me-6">
+            <Link href="/#about-me" className="hover:underline me-4 md:me-6">
               About
-            </a>{' '}
+            </Link>{' '}
           </li>{' '}
           <li>
             {' '}
-            <a
+            <Link
               href="mailto:eduardferresanchez@gmail.com"
               className="hover:underline"
             >
               Contact
-            </a>{' '}
+            </Link>{' '}
           </li>{' '}
         </ul>{' '}
       </div>{' '}

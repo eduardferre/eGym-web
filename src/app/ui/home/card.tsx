@@ -48,7 +48,9 @@ export const CardSkeletonContainer = ({
   return (
     <div className={`relative h-[20rem] rounded-xl overflow-hidden`}>
       {showGradient && (
-        <div className="absolute inset-0 z-40 bg-[rgba(40,40,40,0.30)] [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent),linear-gradient(to_bottom,transparent,white_20%,white_80%,transparent)]"></div>
+        <div
+          className={`${className} absolute inset-0 z-40 bg-[rgba(40,40,40,0.30)] [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent),linear-gradient(to_bottom,transparent,white_20%,white_80%,transparent)]`}
+        ></div>
       )}
       <div className="absolute inset-0">{children}</div>
     </div>
